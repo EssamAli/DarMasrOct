@@ -1,0 +1,41 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>Login Form</title>    
+    <link rel="stylesheet" type="text/css" href="style/style.css">    
+</head>    
+<body>    
+    <h2>Login Page</h2><br>       
+    <form id="login" name= "login" method="POST" action= "/signin">  
+        <div class="login">
+            <label><b>User Name     
+            </b>    
+            </label>    
+            <input type="text" name="Uname" id="Uname" class="form-control" placeholder="Username">    
+            <br><br>   
+            <label><b>Password     
+            </b>    
+            </label>    
+            <input type="Password" name="Pass" id="Pass" class="form-control" placeholder="Password">    
+            <br><br>    
+            <% if(data.resultInput == 'Wrong User'){ %>
+            <p style="color: red;" id="data">Wrong user or password!</p>
+            <br><br>  
+            <% } %>
+            <button type="submit" id="log" value="Submit"> Sign In  </button>   
+        <br><br>    
+        <input type="checkbox" name="check" id="check">    
+        <span>Remember me</span>  
+        <br><br>    
+        <a href="/newuser"> New User? </a>  
+        <br><br>    
+        <a href="#">forgot password?</a>
+        
+        </div>
+        
+    </form>      
+    
+</body>   
+
+<script src="public/client.js"></script>
+</html>  
